@@ -39,4 +39,39 @@
 ## 12. What is a Config Driven UI?
 - **Answer:** Config Driven UI is an approach where UI components' behavior and appearance are configured through external data or settings, making the UI more flexible and configurable.
 
+ ***
+
+ # JavaScript Module Exports
+
+## 1. Named Export:
+- **Syntax:** `export const myVariable = ...;` or `export function myFunction() { ... }`
+- **Usage:** Imported using curly braces, e.g., `import { myVariable } from './module';`
+- **Notes:** Allows exporting multiple variables or functions from a module.
+
+## 2. Default Export:
+- **Syntax:** `export default myDefault;`
+- **Usage:** Imported without curly braces, e.g., `import myDefault from './module';`
+- **Notes:** Allows exporting a single "default" value from a module.
+
+## 3. `* as` Export:
+- **Syntax:** `export * as myExports from './module';`
+- **Usage:** Imported using an alias, e.g., `import { myExports } from './module';`
+- **Notes:** Imports all exports from a module under a single alias.
+
+# Importance of `config.js` File
+
+- **Role:** The `config.js` file is commonly used to store configuration settings such as API keys, environment variables, or any values that might change between development and production.
+- **Benefits:** Centralizing configuration settings makes it easier to manage, update, and ensure consistency across the application.
+
+# React Hooks
+
+## 1. What are React Hooks?
+- **Definition:** React Hooks are functions provided by React that allow functional components to use state, lifecycle methods, and other React features that were previously only available in class components.
+- **Purpose:** Facilitates state management and side effects in functional components, promoting code reuse and composability.
+
+## 2. Importance of `useState` Hook:
+- **Purpose:** The `useState` Hook is used in functional components to add local state to the component. It enables components to manage and update state without using class components.
+- **Benefits:** Simplifies state management, enhances readability, and avoids the need for class components when using state in React applications.
+
+
 
