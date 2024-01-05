@@ -73,5 +73,46 @@
 - **Purpose:** The `useState` Hook is used in functional components to add local state to the component. It enables components to manage and update state without using class components.
 - **Benefits:** Simplifies state management, enhances readability, and avoids the need for class components when using state in React applications.
 
+ ***
+ # Technical Concepts FAQ
+
+## 1. What is a Microservice?
+- **Definition:** Microservices are small, independent, and loosely coupled services that work together to form a complete application.
+
+## 2. What is Monolith architecture?
+- **Definition:** Monolith architecture is a single-tiered software application where the user interface and data management functions are combined into a single program from a single platform.
+
+## 3. What is the difference between Monolith and Microservice?
+- **Difference:**
+  - **Monolith:** Single-tiered, tightly coupled components.
+  - **Microservice:** Decentralized, independent, and loosely coupled components.
+
+## 4. Why do we need a useEffect Hook?
+- **Purpose:** `useEffect` is used in React to perform side effects in functional components. It's commonly used for data fetching, subscriptions, or manually changing the DOM.
+
+## 5. What is Optional Chaining?
+- **Definition:** Optional Chaining is a JavaScript feature that enables reading the value of a property located deep within a chain of connected objects without having to explicitly validate that each reference in the chain is valid.
+
+## 6. What is Shimmer UI?
+- **Definition:** Shimmer UI is a user interface design technique that uses subtle animations or placeholder elements to indicate that content is loading, providing a better user experience during data retrieval.
+
+## 7. What is the difference between JS expression and JS statement?
+- **Difference:**
+  - **Expression:** Produces a value. e.g., `3 + 4` or `myFunction()`.
+  - **Statement:** Performs an action. e.g., `if (x > 5) { /* do something */ }`.
+
+## 8. What is Conditional Rendering, explain with a code example?
+- **Explanation:** Conditional Rendering is displaying different components or content based on certain conditions. Example in React:
+  ```jsx
+  {isLoggedIn ? <UserProfile /> : <Login />}
+
+## 9. What is CORS?
+- **Definition:** Cross-Origin Resource Sharing (CORS) is a security feature implemented by web browsers that controls how web pages in one domain can request and interact with resources in another domain.
+
+## 10. What is async and await?
+- **Definition:** `async` is a keyword used to declare a function as asynchronous. `await` is used inside an asynchronous function to pause execution until a Promise is settled.
+
+## 11. What is the use of `const json = await data.json();` in `getRestaurants()`?
+- **Explanation:** It fetches data from an API using the `fetch` function, converts the response to JSON format, and assigns it to the `json` constant, allowing easy manipulation of the data in subsequent code.
 
 
