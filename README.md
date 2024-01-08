@@ -115,4 +115,108 @@
 ## 11. What is the use of `const json = await data.json();` in `getRestaurants()`?
 - **Explanation:** It fetches data from an API using the `fetch` function, converts the response to JSON format, and assigns it to the `json` constant, allowing easy manipulation of the data in subsequent code.
 
+# Adding Images to Your App
+
+## Using HTML `<img>` Tag
+
+
+```html
+<img src="image.jpg" alt="Description">
+```
+
+## Using CSS background
+
+```html
+.element {
+  background-image: url('image.jpg');
+}
+```
+
+## Using react
+```jsx
+import React from 'react';
+import image from './image.jpg';
+
+function App() {
+  return (
+    <div>
+      <img src={image} alt="Description" />
+    </div>
+  );
+}
+
+export default App;
+```
+
+
+## `console.log(useState())`
+
+If you `console.log(useState())`, it will log an array with two elements: the current state value and the updater function. For example:
+
+```javascript
+const [state, setState] = useState();
+console.log(useState());
+// Output: [undefined, ƒ dispatchAction()]
+```
+
+### `useEffect` without Dependency Array
+
+## `useEffect` without Dependency Array
+```
+If you don't provide a dependency array to `useEffect`, it will run after every render. This can lead to performance issues and unintended side effects. For example:
+
+```javascript
+useEffect(() => {
+  // This will run after every render
+  console.log('Effect ran');
+});
+```
+
+
+## SPA (Single Page Application)
+### SPA (Single Page Application)
+
+SPA is a web application or website that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from the server. This results in a smoother user experience.
+
+## Client Side Routing vs Server Side Routing
+
+### Client Side Routing
+
+Client-side routing is handled by the browser, and navigation occurs without a full page refresh. Commonly used in SPAs.
+
+```javascript
+// Example with React Router
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/page1" component={Page1} />
+        <Route path="/page2" component={Page2} />
+      </Switch>
+    </Router>
+  );
+}
+```
+### Server Side Routing
+
+Server-side routing involves the server responding to each request with a new HTML page. A full page reload occurs with each navigation.
+
+```javascript
+// Example with Express
+const express = require('express');
+const app = express();
+
+app.get('/page1', (req, res) => {
+  // Render HTML for Page 1
+});
+
+app.get('/page2', (req, res) => {
+  // Render HTML for Page 2
+});
+```
+
+***
+
 
