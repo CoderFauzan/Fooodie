@@ -115,6 +115,9 @@
 ## 11. What is the use of `const json = await data.json();` in `getRestaurants()`?
 - **Explanation:** It fetches data from an API using the `fetch` function, converts the response to JSON format, and assigns it to the `json` constant, allowing easy manipulation of the data in subsequent code.
 
+
+*** 
+
 # Adding Images to Your App
 
 ## Using HTML `<img>` Tag
@@ -219,4 +222,127 @@ app.get('/page2', (req, res) => {
 
 ***
 
+## Nested Routes with react-router-dom
 
+To create nested routes using `react-router-dom`, follow these steps:
+
+1. **Install `react-router-dom`:**
+   ```bash
+   npm install react-router-dom
+    ```
+Set up Main App Component:
+
+```jsx
+// App.js
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Dashboard from './Dashboard';
+
+const App = () => (
+  <Router>
+    <Switch>
+      <Route path="/about" component={About} />
+      <Route path="/dashboard" component={Dashboard} />
+      <Route path="/" component={Home} />
+    </Switch>
+  </Router>
+);
+
+export default App;
+```
+Create Nested Routes:
+
+Inside components like Dashboard, use additional Route components.
+Example in Dashboard.js:
+```jsx
+// Dashboard.js
+import { Route } from 'react-router-dom';
+import Overview from './Overview';
+import Settings from './Settings';
+
+const Dashboard = ({ match }) => (
+  <div>
+    <h2>Dashboard</h2>
+    <Route path={`${match.path}/overview`} component={Overview} />
+    <Route path={`${match.path}/settings`} component={Settings} />
+  </div>
+);
+
+export default Dashboard;
+```
+
+Adjust Links for Nested Routes:
+
+In components or navigation, use Link components with correct paths.
+Example in Dashboard component:
+```jsx
+// Dashboard.js
+import { Link } from 'react-router-dom';
+
+const Dashboard = () => (
+  <div>
+    <h2>Dashboard</h2>
+    <ul>
+      <li><Link to="/dashboard/overview">Overview</Link></li>
+      <li><Link to="/dashboard/settings">Settings</Link></li>
+    </ul>
+  </div>
+);
+
+export default Dashboard;
+```
+
+# React Router Dom - `createHashRouter` and `createMemoryRouter`
+
+## `createHashRouter`
+- Used for client-side routing with hash fragments in the URL.
+- Ideal for static websites or environments without server-side configuration.
+- Example usage:
+  ```jsx
+  import { createHashHistory } from 'history';
+  import { createHashRouter } from 'react-router-dom';
+
+  const history = createHashHistory();
+  const App = () => <createHashRouter history={history}>...</createHashRouter>;
+  ```
+## `createMemoryRouter`
+Creates an in-memory history object, useful for testing or non-browser environments.
+Doesn't read or write to the address bar.
+Example usage:
+```jsx
+import { createMemoryHistory } from 'history';
+import { createMemoryRouter } from 'react-router-dom';
+
+const history = createMemoryHistory();
+const App = () => <createMemoryRouter history={history}>...</createMemoryRouter>;
+```
+
+## Class Based Components - Lifecycle Methods
+
+ Order of lifecycle method calls:
+   - `constructor`
+   - `render`
+   - `componentDidMount`
+   - `shouldComponentUpdate`
+   - `render`
+   - `componentDidUpdate`
+   - `componentWillUnmount`
+
+## Why use `componentDidMount`:
+   - Executes after the component is inserted into the DOM.
+   - Used for initial setup, data fetching, and side effects.
+
+## Why use `componentWillUnmount`:
+   - Executes before the component is removed from the DOM.
+   - Used for cleanup, like cancelling network requests or clearing timers.
+
+## Why use `super(props)` in constructor:
+   - `super(props)` is used to call the constructor of the parent class (React.Component).
+   - Necessary to access `this.props` in the constructor.
+
+## Why can't the `useEffect` callback function be async:
+   - `useEffect` expects a cleanup function or undefined to be returned.
+   - Async functions always return a promise, causing issues with cleanup.
+
+***
