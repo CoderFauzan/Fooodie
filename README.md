@@ -346,3 +346,33 @@ const App = () => <createMemoryRouter history={history}>...</createMemoryRouter>
    - Async functions always return a promise, causing issues with cleanup.
 
 ***
+
+
+# Lazy Loading and Suspense Q&A
+
+### When and why do we need `lazy()`?
+Use `lazy()` when you want to dynamically import a component only when it's actually needed, improving initial page load performance.
+
+### What is suspense?
+`Suspense` is a React feature that lets components "wait" for something before rendering. It's often used with dynamic imports and data fetching.
+
+### Why do we get the "A component suspended..." error?
+The error occurs when a component suspends while handling synchronous input. To resolve, wrap the updates causing suspension with `startTransition` to prevent UI replacement with a loading indicator.
+
+### How does suspense fix the error?
+`Suspense` with `startTransition` allows React to prioritize rendering updates, avoiding synchronous interruptions and UI replacement.
+
+### Advantages and disadvantages of code splitting pattern?
+**Advantages:**
+- Faster initial load times.
+- Efficient use of network resources.
+  
+**Disadvantages:**
+- Adds complexity to the codebase.
+- Requires careful management to avoid over-splitting or under-splitting modules.
+
+### When and why do we need suspense?
+Use `Suspense` when dealing with asynchronous operations like dynamic imports or data fetching. It helps manage loading states and improves user experience.
+
+
+***
