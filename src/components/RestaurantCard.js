@@ -9,19 +9,22 @@ const RestaurentCard = (props) => {
   //  console.log({deliveryTime});
 
   return (
-    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
+    <div className="m-4 p-4 w-[250px] h-[450px] bg-gray-100 hover:bg-gray-200">
       <img
-        className="res-logo"
+        className="rounded-lg w-full h-1/2"
         alt="res-logo"
         src={CDN_URL +
           resData.info.cloudinaryImageId
         }
       ></img>
-      <h3>{name}</h3>
-      <h4>{cuisines.join(", ")}</h4>
-      <h4>{avgRatingString}</h4>
-      <h4>{costForTwo}</h4>
-      <h4>{deliveryTime} minutes</h4>
+      <h3 className="font-bold py-4 text-lg">{name}</h3>
+      <h4 className="text-sm"> ⭐{avgRatingString}</h4>
+      <div className="flex justify-between pt-2">
+      <h4 className="text-sm"> ⌚{deliveryTime} minutes</h4>
+      <h4 className="text-sm">💵{costForTwo}</h4>
+      </div>
+      <h6 className="text-xs pt-2">{cuisines.join(", ")}</h6>
+      
     </div>
   );
 };
