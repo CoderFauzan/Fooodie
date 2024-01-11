@@ -383,16 +383,27 @@ Use `Suspense` when dealing with asynchronous operations like dynamic imports or
 
 
 Vanilla CSS: Traditional approach using plain CSS without any preprocessor or framework.
+
 CSS Preprocessors: Utilize preprocessors like Sass, Less, or Stylus to add features like variables, nesting, and mixins to enhance CSS syntax.
+
 CSS-in-JS: Write CSS directly within JavaScript files, often used in React applications. Popular libraries include styled-components and Emotion.
+
 BEM (Block Element Modifier):Methodology for naming CSS classes in a structured and modular way, improving code readability and maintainability.
+
 Atomic CSS:Create small, single-purpose utility classes and combine them to construct UI components. Tailwind CSS is a popular framework following this approach.
+
 Object-Oriented CSS (OOCSS):Emphasizes creating reusable and modular CSS objects that can be combined to build UI components.
+
 SMACSS (Scalable and Modular Architecture for CSS):Organizes stylesheets into five categories (Base, Layout, Module, State, Theme) to create a scalable and maintainable CSS architecture.
+
 Responsive Design:Utilize media queries to adapt the styling based on the device's screen size, ensuring a consistent user experience across different devices.
+
 CSS Frameworks: Use frameworks like Bootstrap, Foundation, or Bulma to leverage pre-designed components and a grid system, streamlining the development process.
+
 Critical CSS: Identify and inline the minimal CSS required for above-the-fold content to improve page load performance.
+
 Functional CSS: Write CSS in a functional programming style, focusing on small, single-purpose classes that can be composed to achieve styling goals.
+
 PostCSS: Use PostCSS plugins to enhance the CSS development process, such as autoprefixing, linting, and minification.
 
 ## Tailwind Configuration
