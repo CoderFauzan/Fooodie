@@ -11,7 +11,7 @@ class UserClass extends React.Component {
       },
     };
 
-    console.log(props);
+    // console.log(props);
   }
 
   async componentDidMount() {
@@ -25,15 +25,15 @@ class UserClass extends React.Component {
       userInfo: json,
     });
 
-    console.log(json);
+    // console.log(json);
   }
 
   componentDidUpdate() {
-    console.log("Child Component Did Update");
+    // console.log("Child Component Did Update");
   }
 
   componentWillUnmount() {
-    console.log("Child Component Will Unmount");
+    // console.log("Child Component Will Unmount");
   }
 
   render() {
