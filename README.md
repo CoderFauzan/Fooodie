@@ -425,3 +425,18 @@ The `.postcssrc` file is used to configure settings for PostCSS, a tool that tra
 Ensure that the `.postcssrc` file is appropriately configured to suit the project's needs.
 
 ***
+
+
+## Prop Drilling
+Prop drilling refers to the process of passing data through multiple layers of components in a React application by passing props down the component tree.
+
+## Lifting State Up
+Lifting state up is a React pattern where the state is moved from a lower-level component to a higher-level component to share the state among multiple components.
+
+## Context Provider and Context Consumer
+Context Provider and Context Consumer are part of React Context API. Provider is used to pass data to its descendants, and Consumer is used to access that data without prop drilling.
+
+## Default Value in Context Provider
+Yes, if you don't pass a value to the provider, it takes the default value specified in the createContext function.
+
+***
