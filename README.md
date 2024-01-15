@@ -440,3 +440,39 @@ Context Provider and Context Consumer are part of React Context API. Provider is
 Yes, if you don't pass a value to the provider, it takes the default value specified in the createContext function.
 
 ***
+
+# Redux
+
+## useContext vs Redux
+- `useContext`: React hook for accessing the context directly in a functional component.
+- `Redux`: State management library for managing global state in complex applications.
+
+## Advantage of using Redux Toolkit over Redux
+- Simplifies common Redux patterns.
+- Includes utilities like `createSlice` and `configureStore` for easier setup.
+- Helps reduce boilerplate code.
+
+## Explain Dispatcher
+- Dispatcher is a function in Redux that sends actions to the store.
+- Actions are plain JavaScript objects describing the change.
+
+## Explain Reducer
+- Reducer is a pure function that specifies how the application's state changes in response to an action.
+- It takes the current state and an action, returning the new state.
+
+## Explain slice
+- `slice` in Redux refers to a piece of the Redux state.
+- It can be created using `createSlice`, encapsulating reducer logic and actions.
+
+## Explain selector
+- A selector is a function that takes the Redux state and computes derived data from it.
+- It helps to efficiently extract and transform data from the state.
+
+## Explain createSlice and the configuration it takes
+- `createSlice` is a function from Redux Toolkit to define a slice of the Redux store.
+- Configuration:
+  - `name`: String, the slice name.
+  - `initialState`: The initial state value.
+  - `reducers`: Object, mapping action types to reducer functions.
+
+***
