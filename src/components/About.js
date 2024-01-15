@@ -18,10 +18,10 @@ class About extends Component {
   render() {
     console.log("Parent render");
     return (
-      <div>
+      <div className="text-center m-4 p-4">
         <h1>About</h1>
         <div>
-          Logged in user
+          {/* Logged in user */}
           <UserContext.Consumer>
             {({loggedInUser})=>(
               <h1 className="text-xl font-bold">{loggedInUser}</h1>
@@ -29,8 +29,8 @@ class About extends Component {
 
           </UserContext.Consumer>
         </div>
-        <h2>This is about page</h2>
-        <User name={"fauzan"} />
+        {/* <h2>This is about page</h2> */}
+        {/* <User name={"fauzan"} /> */}
         <UserClass name={"class"} location={"Delhi class"} />
       </div>
     );

@@ -27,7 +27,7 @@ const RestaurentCard = (props) => {
       <h4 className="text-sm">💵{costForTwo}</h4>
       </div>
       <h6 className="text-xs pt-2">{cuisines.join(", ")}</h6>
-      <h6 className="text-xs pt-2">User:{loggedInUser}</h6>
+      {/* <h6 className="text-xs pt-2">User:{loggedInUser}</h6> */}
     </div>
   );
 };
