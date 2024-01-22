@@ -1,3 +1,4 @@
+# Check website - https://foodie-ecommercefmz.netlify.app/
 # React FAQs
 
 ## 1. Is JSX mandatory for React?
